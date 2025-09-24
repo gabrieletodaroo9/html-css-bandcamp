@@ -114,6 +114,16 @@ body {
         outline: none;
         color: var(--bcamp-light);
     }
+
+    .nav-left{
+        position: relative;i
+    }
+
+    .logo-mobile{display: none;
+        position: absolute;
+        top: 0;
+        left: auto;
+    }
 }
 
 .bottom-search {
@@ -140,6 +150,7 @@ i {
 .log-in:hover {
     background-color: #3c3c3c;
     cursor: pointer;
+    text-decoration: underline;
 
 }
 
@@ -201,11 +212,14 @@ main {
     height: 30px;
     font-size: 0.8rem;
     border-radius: 50%;
-    background-color: lightgray;
-    /* opacity: 70%; */
-    color: black;
+    background-color: black;
+    opacity: 60%;
+    color: white;
     align-items: center;
     justify-content: center;
+}
+.cta-play:hover{
+    opacity: 100%;
 }
 
 .img-song:hover {
@@ -230,10 +244,17 @@ main {
 }
 
 .song-title,
-.song-author {
+.song-author,
+.song-type {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.song-title:hover,
+.song-author:hover,
+.song-type:hover{
+    text-decoration: underline;
 }
 
 /* ASIDE */
@@ -291,8 +312,16 @@ aside {
     margin: 1rem 0;
 
     a {
+        display: block;
+        width: 100%;
         color: var(--bcamp-primary);
     }
+}
+
+.btn-white:hover{
+    background-color: #e4dfdf;
+    text-decoration: underline;
+    color: var(--bcamp-light-dark);
 }
 
 .btn-dark {
@@ -300,8 +329,15 @@ aside {
     margin-bottom: 2rem;
 
     a {
+        display: block;
+        width: 100%;
         color: var(--bcamp-white);
     }
+}
+
+.btn-dark:hover{
+   background-color: #303030;
+   text-decoration: underline;
 }
 
 .author-photo>img {
@@ -324,10 +360,22 @@ aside {
 /* SCROLL BARRA LATERALE */
 
 .left-col::-webkit-scrollbar,
-aside::-webkit-scrollbar {
-    width: 0;
+.right-col::-webkit-scrollbar {
+    width: 5px;
 }
 
+
+
+.left-col::-webkit-scrollbar-thumb,
+.right-col::-webkit-scrollbar-thumb {
+  background: var(--bcamp-light);
+  border-radius: 10px;
+}
+.left-col::-webkit-scrollbar-track,
+.right-col::-webkit-scrollbar-track {
+  background: var(--bcamp-light-dark); 
+  border-radius: 10px;
+}
 
 
 @media screen and (max-width:992px) {
@@ -350,7 +398,17 @@ aside::-webkit-scrollbar {
 
 
 @media screen and (max-width:600px) {
-.right-col{
+
+    .logo{
+        display: none;
+    }
+
+    .navbar .logo-mobile{
+        display: block;
+        top:-1rem;
+    }
+
+    .right-col{
     display: none;
 }
 .left-col{
