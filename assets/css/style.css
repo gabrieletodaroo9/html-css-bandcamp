@@ -102,6 +102,10 @@ body {
 
 /* MAIN */
 
+main{
+    color: var(--bcamp-white);
+}
+
 .left-col,
 .right-col {
     height: calc(100vh - 112px);
@@ -114,14 +118,39 @@ body {
 
     /* CARD */
 
-    .song-card {
+    .song-card { 
+        padding:0.5rem ;
         width: calc(100% / 4);
     }
+    .song-card>*{
+        padding-bottom: 0.3rem;
+    }
+    .img-song > img{
+        border: 2px solid var(--bcamp-light-dark);
+        width: 100%;
+    }
 
+    .song-type{
+        color: var(--bcamp-light);
+    }
 
+}
+
+.album{
+    padding: 1rem;
 }
 
 .right-col {
     width: 30%;
     overflow-y: auto;
+}
+
+/* ASIDE */
+
+aside{
+    border-left: 2px solid var(--bcamp-light-dark);
+}
+
+.img-live-song > img{
+    width: 100%
 }
