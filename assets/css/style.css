@@ -115,11 +115,13 @@ body {
         color: var(--bcamp-light);
     }
 
-    .nav-left{
-        position: relative;i
+    .nav-left {
+        position: relative;
+        i
     }
 
-    .logo-mobile{display: none;
+    .logo-mobile {
+        display: none;
         position: absolute;
         top: 0;
         left: auto;
@@ -218,7 +220,8 @@ main {
     align-items: center;
     justify-content: center;
 }
-.cta-play:hover{
+
+.cta-play:hover {
     opacity: 100%;
 }
 
@@ -253,7 +256,7 @@ main {
 
 .song-title:hover,
 .song-author:hover,
-.song-type:hover{
+.song-type:hover {
     text-decoration: underline;
 }
 
@@ -273,7 +276,8 @@ aside {
     width: 100%
 }
 
-.play-button {flex-shrink: 0;
+.play-button {
+    flex-shrink: 0;
     flex-grow: 0;
     width: 70px;
     height: 70px;
@@ -318,7 +322,7 @@ aside {
     }
 }
 
-.btn-white:hover{
+.btn-white:hover {
     background-color: #e4dfdf;
     text-decoration: underline;
     color: var(--bcamp-light-dark);
@@ -335,9 +339,9 @@ aside {
     }
 }
 
-.btn-dark:hover{
-   background-color: #303030;
-   text-decoration: underline;
+.btn-dark:hover {
+    background-color: #303030;
+    text-decoration: underline;
 }
 
 .author-photo>img {
@@ -357,6 +361,12 @@ aside {
     margin: 2rem 0;
 }
 
+/* FOOTER */
+
+footer {
+    display: none;
+}
+
 /* SCROLL BARRA LATERALE */
 
 .left-col::-webkit-scrollbar,
@@ -368,13 +378,14 @@ aside {
 
 .left-col::-webkit-scrollbar-thumb,
 .right-col::-webkit-scrollbar-thumb {
-  background: var(--bcamp-light);
-  border-radius: 10px;
+    background: var(--bcamp-light);
+    border-radius: 10px;
 }
+
 .left-col::-webkit-scrollbar-track,
 .right-col::-webkit-scrollbar-track {
-  background: var(--bcamp-light-dark); 
-  border-radius: 10px;
+    background: var(--bcamp-light-dark);
+    border-radius: 10px;
 }
 
 
@@ -385,7 +396,7 @@ aside {
 }
 
 @media screen and (max-width:744px) {
-    
+
 
     .right-col {
         padding: 0 0.5rem;
@@ -399,22 +410,74 @@ aside {
 
 @media screen and (max-width:600px) {
 
-    .logo{
+    .logo {
         display: none;
     }
 
-    .navbar .logo-mobile{
+    .navbar .logo-mobile {
         display: block;
-        top:-1rem;
+        top: -1rem;
     }
 
-    .right-col{
-    display: none;
+    .right-col {
+        display: none;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .navbar .top-search {
+        display: none;
+    }
+
+    .album {
+        flex-direction: column;
+    }
+
+    .left-col {
+        height: calc(100vh - 224px);
+    }
+
+    footer {
+        display: block;
+        width: 100%;
+        position: sticky;
+        background-color: var(--bcamp-secondary);
+    }
 }
-.left-col{
+
+.play-mobile {
+    margin: 1rem 0;
     width: 100%;
+    justify-content: center;
+    color: var(--bcamp-primary);
 }
-.navbar .top-search{
-    display: none;
+
+.footer-btn{display: flex;
+    align-items: center;
+    padding:0 1rem;
+    background-color: var(--bcamp-secondary);
+    opacity: 80%;
 }
+
+.fa-play {
+    margin: 0 1rem ;
+}
+
+.footer-info-artist{
+    font-weight: 600;
+    color: var(--bcamp-white);
+    margin: 0 1rem;
+}
+
+.fas{
+    border-radius: 50%;
+    background-color: white;
+    padding: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
