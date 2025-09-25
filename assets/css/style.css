@@ -239,8 +239,6 @@ footer {
     overflow-y: auto;
     flex-wrap: wrap;
     align-content: flex-start;
-
-
 }
 
 /* #region MAIN */
@@ -316,9 +314,34 @@ footer {
 
 /* #region ASIDE */
 
+#popover-play>audio {
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    &::-webkit-media-controls-panel {
+        background-color: #0CACD7;
+    }
+
+    &::-webkit-media-controls-play-button {
+        background-color: var(--bcamp-white);
+        opacity: 90%;
+        border-radius: 50%;
+        padding: 0.1rem;
+    }
+}
+
 .img-live-song {
+    border: 0;
+    position: relative;
     width: 90%;
     margin-bottom: 2rem;
+
+    &>img {
+        cursor: pointer;
+    }
 }
 
 .play-button {
@@ -369,10 +392,11 @@ footer {
 
 /* #region FOOTER */
 
-audio{
+audio {
     width: 100%;
     padding: 0.9rem 7rem;
 }
+
 .footer-info-artist {
     font-weight: 600;
     color: var(--bcamp-white);
