@@ -1,4 +1,4 @@
-/* ROOT */
+/* #region ROOT */
 
 :root {
     --bcamp-primary: #222222;
@@ -7,16 +7,17 @@
     --bcamp-light-dark: #3c3c3c;
     --bcamp-white: #fff;
 }
+/* #endregion ROOT */
 
-/* DEBUG */
+/* #region DEBUG */
 
 .debug * {
     border: 1px dashed white;
-
-
 }
 
-/* GENERICS */
+/* #endregion DEBUG */
+
+/* #region GENERICS */
 
 * {
     margin: 0;
@@ -31,12 +32,31 @@ body {
     background-color: var(--bcamp-primary);
 }
 
-.album {
-    margin: 0 auto;
-    max-width: 1280px;
+main {
+    color: var(--bcamp-white);
 }
 
-/* UTILS */
+a {
+    color: var(--bcamp-white);
+}
+
+input {
+    width: 100%;
+    margin-left: 0.5rem;
+    height: 100%;
+    background-color: var(--bcamp-light-dark);
+    border: none;
+    font-size: 1.1rem;
+}
+
+i {
+    color: var(--bcamp-light);
+    cursor: pointer;
+}
+
+/* #endregion GENERICS */
+
+/* #region UTILS */
 
 .d-flex {
     display: flex;
@@ -50,7 +70,9 @@ body {
     align-items: center;
 }
 
-/* NAVBAR */
+/* #endregion UTILS */
+
+/* #region NAVBAR */
 
 .navbar {
     width: 100%;
@@ -75,46 +97,6 @@ body {
         gap: 2rem;
     }
 
-    a {
-        color: var(--bcamp-white);
-    }
-
-    input {
-        width: 100%;
-        margin-left: 0.5rem;
-        height: 100%;
-        background-color: var(--bcamp-light-dark);
-        border: none;
-        font-size: 1.1rem;
-    }
-
-    input::placeholder {
-        color: var(--bcamp-light);
-    }
-
-
-    .search-bar {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0 1rem;
-        background-color: var(--bcamp-light-dark);
-
-    }
-
-    i {
-        color: var(--bcamp-light);
-    }
-
-    .top-search {
-        border-radius: 5px;
-    }
-
-    .search-bar>input:focus {
-        outline: none;
-        color: var(--bcamp-light);
-    }
-
     .nav-left {
         position: relative;
         i
@@ -126,41 +108,59 @@ body {
         top: 0;
         left: auto;
     }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 1rem;
+        background-color: var(--bcamp-light-dark);
+    }
+
+    .top-search {
+        border-radius: 5px;
+    }
+
+    .bottom-search {
+        width: 360px;
+        height: 90%;
+        border-radius: 20px;
+        border: 1px solid var(--bcamp-light);
+    }
+
+    .sign-up,
+    .log-in {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .sign-up:hover,
+    .log-in:hover {
+        background-color: #3c3c3c;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    input::placeholder {
+        color: var(--bcamp-light);
+    }
+
+    .search-bar>input:focus {
+        outline: none;
+        color: var(--bcamp-light);
+    }
 }
 
-.bottom-search {
-    width: 360px;
-    height: 90%;
-    border-radius: 20px;
-    border: 1px solid var(--bcamp-light);
-}
+/* #endregion NAVBAR */
 
-i {
-    cursor: pointer;
-}
+/* #region MAIN */
 
-.logo {
-    cursor: pointer;
-}
-
-.sign-up,
-.log-in {
-    padding: 1.5rem 0.5rem;
-}
-
-.sign-up:hover,
-.log-in:hover {
-    background-color: #3c3c3c;
-    cursor: pointer;
-    text-decoration: underline;
-
-}
-
-/* MAIN */
-
-main {
-    color: var(--bcamp-white);
-
+.album {
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 .left-col,
@@ -260,7 +260,9 @@ main {
     text-decoration: underline;
 }
 
-/* ASIDE */
+/* #endregion MAIN */
+
+/* #region ASIDE */
 
 aside {
     color: var(--bcamp-white);
@@ -361,13 +363,53 @@ aside {
     margin: 2rem 0;
 }
 
-/* FOOTER */
+/* #endregion ASIDE */
+
+/* #region FOOTER */
 
 footer {
     display: none;
 }
 
-/* SCROLL BARRA LATERALE */
+.play-mobile {
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: center;
+    color: var(--bcamp-primary);
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--bcamp-secondary);
+    opacity: 80%;
+}
+
+.fa-play {
+    margin: 0 1rem;
+}
+
+.footer-info-artist {
+    font-weight: 600;
+    color: var(--bcamp-white);
+    margin: 0 1rem;
+}
+
+.fas {
+    border-radius: 50%;
+    background-color: white;
+    padding: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* #endregion FOOTER */
+
+/* #region SCROLL BARRA LATERALE */
 
 .left-col::-webkit-scrollbar,
 .right-col::-webkit-scrollbar {
@@ -388,6 +430,9 @@ footer {
     border-radius: 10px;
 }
 
+/* #endregion SCROLL BARRA LATERALE */
+
+/* #region MEDIA QUERY */
 
 @media screen and (max-width:992px) {
     .left-col .song-card {
@@ -447,37 +492,4 @@ footer {
     }
 }
 
-.play-mobile {
-    margin: 1rem 0;
-    width: 100%;
-    justify-content: center;
-    color: var(--bcamp-primary);
-}
-
-.footer-btn{display: flex;
-    align-items: center;
-    padding:0 1rem;
-    background-color: var(--bcamp-secondary);
-    opacity: 80%;
-}
-
-.fa-play {
-    margin: 0 1rem ;
-}
-
-.footer-info-artist{
-    font-weight: 600;
-    color: var(--bcamp-white);
-    margin: 0 1rem;
-}
-
-.fas{
-    border-radius: 50%;
-    background-color: white;
-    padding: 1.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    flex-shrink: 0;
-}
+/* #endregion MEDIA QUERY */
