@@ -369,7 +369,7 @@ footer {
 
 /* #region FOOTER */
 
-.play-mobile {
+/* .play-mobile {
     margin: 1rem 0;
     width: 100%;
     justify-content: center;
@@ -386,7 +386,7 @@ footer {
 
 .fa-play {
     margin: 0 1rem;
-}
+} */
 
 .footer-info-artist {
     font-weight: 600;
@@ -403,6 +403,7 @@ footer {
     justify-content: center;
     flex-grow: 1;
     flex-shrink: 0;
+    color: #222222;
 }
 
 /* #endregion FOOTER */
