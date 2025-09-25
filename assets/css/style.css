@@ -468,7 +468,7 @@ audio{
         display: block;
         width: 100%;
         position: sticky;
-        background-color: var(--bcamp-secondary);
+        background-color: var(--bcamp-primary);
     }
 }
 
